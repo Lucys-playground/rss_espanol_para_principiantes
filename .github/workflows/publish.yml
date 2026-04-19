@@ -1,0 +1,76 @@
+name: Publish daily post
+
+on:
+  schedule:
+    - cron: "15 6 * * *"
+  workflow_dispatch:
+    inputs:
+      publish_date:
+        description: "Volitelné datum YYYY-MM-DD pro ruční test"
+        required: false
+        type: string
+      rebuild_all:
+        description: "Přegenerovat všechny už publikované HTML stránky"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build site
+        env:
+          SITE_URL: https://lucys-playground.github.io/rss_espanol_para_principiantes
+          SITE_TITLE: Español
+          SITE_DESCRIPTION: Textos y diálogos cortos en español para principiantes
+          PUBLISH_TZ: Europe/Prague
+          PUBLISH_DATE: ${{ github.event.inputs.publish_date || '' }}
+          REBUILD_ALL: ${{ github.event.inputs.rebuild_all == 'true' && '1' || '' }}
+        run: python scripts/build.py
+
+      - name: Commit generated files back to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/published.json docs/
+          git diff --cached --quiet || git commit -m "Publish daily post"
+          git push
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
