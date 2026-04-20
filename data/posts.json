@@ -8,13 +8,13 @@
     "level": "A1",
     "html": "<div lang=\"es\"><p>Hola, hoy es un día especial.</p><p>¡Feliz santo!</p><p>Te deseo alegría, salud y un día muy bonito.</p><p>Gracias por estar aquí.</p><p>Un abrazo.</p><div lang=\"cs\"><br><br><br><br><br><br><br><br><br><br><br><br><hr><p><strong>Česky:</strong></p><p>Ahoj, dnes je zvláštní den.</p><p>Všechno nejlepší k svátku!</p><p>Přeji ti radost, zdraví a moc hezký den.</p><p>Děkuji, že jsi tady.</p><p>Objetí.</p></div></div>"
   },
-    {
-    "title": "Otra ves",
+  {
+    "title": "Esta noche hay flamenco",
     "lang": "es",
-    "slug": "feliz-santo",
+    "slug": "esta-noche-hay-flamenco",
     "published": "2026-04-21T04:15:00+02:00",
-    "path": "/posts/feliz-santo.html",
+    "path": "/posts/esta-noche-hay-flamenco.html",
     "level": "A1",
-    "html": "<div lang=\"es\"><p>Hola, hoy es un día especial.</p><p>¡Feliz santo!</p><p>Te deseo alegría, salud y un día muy bonito.</p><p>Gracias por estar aquí.</p><p>Un abrazo.</p><div lang=\"cs\"><br><br><br><br><br><br><br><br><br><br><br><br><hr><p><strong>Česky:</strong></p><p>Ahoj, dnes je zvláštní den.</p><p>Všechno nejlepší k svátku!</p><p>Přeji ti radost, zdraví a moc hezký den.</p><p>Děkuji, že jsi tady.</p><p>Objetí.</p></div></div>"
+    "html": "<div lang=\"es\"><p>—Hola, Ana, ¿qué planes tienes para esta noche?</p><p>—Voy a ver un espectáculo de flamenco.</p><p>—¡Qué buena idea! ¿Vas sola?</p><p>—No, voy con mi hermana.</p><p>—Qué bien. ¿Os gusta el flamenco?</p><p>—Sí, mucho. A mi hermana le encanta, y a mí también.</p><p>—¿A qué hora empieza?</p><p>—A las siete y media.</p><p>—Entonces todavía tienes tiempo.</p><p>—Sí, primero vamos a tomar un café.</p><p>—Perfecto. Que lo paséis muy bien.</p><p>—Gracias. Mañana te cuento qué tal.</p><div lang=\"cs\"><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><p>.</p><hr><p><strong>Česky:</strong></p><p>—Ahoj, Ano, jaké máš plány na dnešní večer?</p><p>—Jdu na flamencové představení.</p><p>—To je skvělý nápad! Jdeš sama?</p><p>—Ne, jdu se svou sestrou.</p><p>—To je fajn. Máte rády flamenco?</p><p>—Ano, moc. Moje sestra ho miluje a já taky.</p><p>—V kolik to začíná?</p><p>—V půl osmé.</p><p>—Tak to máš ještě čas.</p><p>—Ano, nejdřív si ještě zajdeme na kávu.</p><p>—Perfektní. Hezky si to užijte.</p><p>—Děkuji. Zítra ti povím, jaké to bylo.</p></div></div>"
   } 
 ]
